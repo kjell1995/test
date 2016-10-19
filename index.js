@@ -24,9 +24,9 @@ app.use((req, res)=>{
 //custom 5000 page
 app.use((err,req,res,next)=>{
     console.error(err.stack);
-    res.type("text/plain");
     res.status(500);
-    res.send("500 - Server Error");
+    res.render("500");
+    
 });
 
 app.listen(app.get("port"),() =>{
